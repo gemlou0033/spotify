@@ -1,4 +1,4 @@
-const CACHE_NAME = "spotify-song-rater-v1";
+const CACHE_NAME = "spotify-song-rater-v2";
 
 self.addEventListener("install", (event) => {
   event.waitUntil(

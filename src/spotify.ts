@@ -65,7 +65,10 @@ type SpotifyPlaylist = {
 type PlaylistTrackItem = { item?: SpotifyTrack | null; track?: SpotifyTrack | null };
 
 const clientId = () => import.meta.env.VITE_SPOTIFY_CLIENT_ID?.trim();
-export const redirectUri = () => import.meta.env.VITE_SPOTIFY_REDIRECT_URI?.trim() || window.location.origin + "/";
+export const redirectUri = () =>
+  window.location.hostname === "gemlou0033.github.io"
+    ? "https://gemlou0033.github.io/spotify/"
+    : import.meta.env.VITE_SPOTIFY_REDIRECT_URI?.trim() || new URL(import.meta.env.BASE_URL || "/", window.location.href).toString();
 
 export function hasClientId() {
   return Boolean(clientId());
