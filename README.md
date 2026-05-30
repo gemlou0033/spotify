@@ -44,11 +44,13 @@ Open:
 http://127.0.0.1:5173/
 ```
 
-The bridge writes the artist seed to:
+The bridge writes the artist seed to an ignored local file:
 
 ```text
 data/artists.json
 ```
+
+Because this repo is public, do not commit your real `data/artists.json`. The tracked `data/artists.example.json` is only a placeholder.
 
 ## Mobile Hosting
 
@@ -60,7 +62,7 @@ This repo includes a GitHub Pages workflow for the static app.
 
 ```text
 VITE_SPOTIFY_CLIENT_ID=your_spotify_client_id_here
-VITE_SPOTIFY_REDIRECT_URI=https://your-github-user.github.io/spotify/
+VITE_SPOTIFY_REDIRECT_URI=https://gemlou0033.github.io/spotify/
 ```
 
 4. Add the exact same GitHub Pages URL as a Spotify redirect URI.
@@ -92,4 +94,3 @@ It adapts the useful Exportify mechanics from the local Exportify repo:
 - Liked Songs as a pseudo-playlist
 - track paging in batches of 50/100
 - short retries for Spotify rate limits and server errors
-

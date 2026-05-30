@@ -1,4 +1,5 @@
-.env.local
+.env*
+!.env.example
 .tools/
 node_modules/
 dist/
@@ -6,4 +7,4 @@ dist/
 data/*
 !data/
 !data/.gitkeep
-!data/artists.json
+!data/artists.example.json

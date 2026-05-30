@@ -27,7 +27,7 @@ jobs:
       - name: Build
         env:
           VITE_SPOTIFY_CLIENT_ID: ${{ vars.VITE_SPOTIFY_CLIENT_ID }}
-          VITE_SPOTIFY_REDIRECT_URI: ${{ vars.VITE_SPOTIFY_REDIRECT_URI }}
+          VITE_SPOTIFY_REDIRECT_URI: ${{ vars.VITE_SPOTIFY_REDIRECT_URI || 'https://gemlou0033.github.io/spotify/' }}
           VITE_BASE_PATH: ./
         run: npm run build
       - uses: actions/upload-pages-artifact@v3
