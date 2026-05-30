@@ -1,0 +1,9 @@
+.env.local
+.tools/
+node_modules/
+dist/
+.spotify-openapi.yaml
+data/*
+!data/
+!data/.gitkeep
+!data/artists.json
